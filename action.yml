@@ -1,0 +1,19 @@
+name: bibtex-tidy
+description: GitHub Action to run bibtex-tidy, a BibTeX formatter
+author: Gray Espinoza
+
+branding:
+  icon: align-left
+  color: black
+
+inputs:
+  token:
+    description: The GITHUB_SECRET token
+    required: true
+  args:
+    description: CLI arguments to pass to bibtex-tidy
+    required: false
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
