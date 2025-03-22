@@ -21,8 +21,7 @@ jobs:
     - name: Run bibtex-tidy
       uses: grayespinoza/bibtex-tidy-action@main
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        args:
+        args: --no-modify
     - name: Push
       uses: stefanzweifel/git-auto-commit-action@master
       with:
