@@ -1,8 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 set -eu
-shopt -s globstar
 
-
+find . -name "*.bib" | xargs bibtex-tidy $*
 
 exit 0
