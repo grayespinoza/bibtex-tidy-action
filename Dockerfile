@@ -1,6 +1,6 @@
-FROM
+FROM node:alpine
 
-RUN
+RUN npm install -g bibtex-tidy
 
 COPY entrypoint.sh .
 
