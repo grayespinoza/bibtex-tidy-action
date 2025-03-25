@@ -2,8 +2,12 @@
 GitHub Action to run [bibtex-tidy](https://github.com/FlamingTempura/bibtex-tidy), a BibTeX formatter.
 
 ## Usage
-1. Create `bibtex-tidy.yml` in `.github/workflows/`
-2. Paste the following into `bibtex-tidy.yml`:
+1. Create `.github/workflows/bibtex-tidy.yml`
+2. Configure `bibtex-tidy.yml` ([see examples](#examples))
+3. Commit and push `bibtex-tidy.yml`
+
+### Examples
+The following formats all `.bib` files in the repository on pushes and pull requests, then pushes the changes.
 ```yml
 name: bibtex-tidy
 on: [push, pull_request]
@@ -20,14 +24,11 @@ jobs:
         ref: ${{ github.head_ref }}
     - name: Run bibtex-tidy
       uses: grayespinoza/bibtex-tidy-action@main
-      with:
-        args: --no-modify
     - name: Push
       uses: stefanzweifel/git-auto-commit-action@master
       with:
         commit_message: "Formatted using bibtex-tidy"
 ```
-3. Commit and push `bibtex-tidy.yml`
 
 ## Reporting Issues
 Please use [GitHub Issues](https://github.com/grayespinoza/bibtex-tidy-action/issues) to report bugs, crashes, and other issues.
