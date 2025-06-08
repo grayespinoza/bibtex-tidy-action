@@ -29,14 +29,6 @@ jobs:
       with:
         commit_message: "Formatted using bibtex-tidy"
 ```
-The following formats all `.bib` files in `bibs/` (located in the root of the repository) and its subdirectories using `tabs` as indentation.
-```yml
-- name: Run bibtex-tidy
-  uses: grayespinoza/bibtex-tidy-action@main
-  with:
-    opts: --tab
-    inputs: bibs/
-```
 
 ## Reporting Issues
 Please use [GitHub Issues](https://github.com/grayespinoza/bibtex-tidy-action/issues) to report bugs, crashes, and other issues.
