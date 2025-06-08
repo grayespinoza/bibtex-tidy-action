@@ -2,15 +2,15 @@
 GitHub Action to run [bibtex-tidy](https://github.com/FlamingTempura/bibtex-tidy), a BibTeX formatter.
 
 ## Usage
-1. Create `.github/workflows/cd.yml`
-2. Configure `cd.yml`
-3. Commit and push `cd.yml`
+1. Create `.github/workflows/ci.yml`
+2. Configure `ci.yml`
+3. Commit and push `ci.yml`
 
 ### Examples
 The following formats all `.bib` files in branch `main` on pushes, then pushes the changes.
-`.github/workflows/cd.yml`
+`.github/workflows/ci.yml`
 ```yml
-name: CD
+name: CI
 on:
   push:
     branches: main
